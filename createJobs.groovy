@@ -6,3 +6,18 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+
+pipelineJob('SpringBoot-Angular-Docker') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/csankhala/SpringBoot-Angular-Gradle.git'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
